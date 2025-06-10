@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using kolokwium1.Services;
 
@@ -11,9 +12,11 @@ using kolokwium1.Services;
 namespace kolokwium1.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250610104531_Init")]
+    partial class Init
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -93,7 +96,7 @@ namespace kolokwium1.Migrations
                             MatchId = 1,
                             BestRating = 5f,
                             MapId = 1,
-                            MatchDate = new DateTime(2025, 6, 10, 12, 45, 42, 876, DateTimeKind.Local).AddTicks(420),
+                            MatchDate = new DateTime(2025, 6, 10, 12, 45, 30, 934, DateTimeKind.Local).AddTicks(3699),
                             Team1Score = 100,
                             Team2Score = 100,
                             TournamentId = 1
@@ -129,14 +132,14 @@ namespace kolokwium1.Migrations
                         new
                         {
                             PlayerId = 1,
-                            BirthDate = new DateTime(2025, 6, 10, 12, 45, 42, 872, DateTimeKind.Local).AddTicks(8859),
+                            BirthDate = new DateTime(2025, 6, 10, 12, 45, 30, 930, DateTimeKind.Local).AddTicks(2153),
                             FirstName = "John",
                             LastName = "Doe"
                         },
                         new
                         {
                             PlayerId = 2,
-                            BirthDate = new DateTime(2025, 6, 10, 12, 45, 42, 872, DateTimeKind.Local).AddTicks(8929),
+                            BirthDate = new DateTime(2025, 6, 10, 12, 45, 30, 930, DateTimeKind.Local).AddTicks(2197),
                             FirstName = "Jane",
                             LastName = "Doe"
                         });
@@ -197,9 +200,9 @@ namespace kolokwium1.Migrations
                         new
                         {
                             TournamentId = 1,
-                            EndDate = new DateTime(2025, 6, 10, 12, 45, 42, 873, DateTimeKind.Local).AddTicks(3936),
+                            EndDate = new DateTime(2025, 6, 10, 12, 45, 30, 930, DateTimeKind.Local).AddTicks(9316),
                             Name = "Some Tournament",
-                            StartDate = new DateTime(2025, 6, 10, 12, 45, 42, 873, DateTimeKind.Local).AddTicks(3923)
+                            StartDate = new DateTime(2025, 6, 10, 12, 45, 30, 930, DateTimeKind.Local).AddTicks(9281)
                         });
                 });
 
